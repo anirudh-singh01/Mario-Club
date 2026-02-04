@@ -28,6 +28,9 @@ function NewsPage() {
           <li><Link to="/community">Community</Link></li>
         </ul>
       </nav>
+      <main>
+        <iframe src="https://nintendonews.com/news/mario?utm_source=chatgpt.com" frameborder="0"></iframe>
+      </main>
       
       <section className='join' id='join'>
         <h2>

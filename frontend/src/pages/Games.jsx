@@ -27,6 +27,9 @@ function Games() {
           <li><Link to="/community">Community</Link></li>
         </ul>
       </nav>
+      <main>
+        <iframe src="https://www.smbgames.be/" frameborder="0"></iframe>
+      </main>
       
       <section className='join' id='join'>
         <h2>
