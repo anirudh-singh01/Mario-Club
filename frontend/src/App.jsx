@@ -3,6 +3,7 @@ import Home from "./pages/Home";
 import News from "./pages/NewsPage";
 import Games from "./pages/Games";
 import Community from "./pages/Community";
+import Login from "./pages/LoginPage";
 
 function App() {
   return (
@@ -12,6 +13,7 @@ function App() {
         <Route path="/news" element={<News />} />
         <Route path="/games" element={<Games />} />
         <Route path="/community" element={<Community />} />
+        <Route path="/login" element={<Login />} />
       </Routes>
     </BrowserRouter>
   );
