@@ -1,8 +1,14 @@
 import { Link } from 'react-router-dom'
-import '../pages/Home.css'
+import '../pages/LoginPage.css'
 import img from '../utils/images'
 
 function LoginPage() {
+  
+    function search(formData) {
+      const email = formData.get('email')
+      const password = formData.get('password')
+      console.log(email, password)
+  }
 
   return (
     <div>
@@ -27,22 +33,26 @@ function LoginPage() {
           <li><Link to="/community">Community</Link></li>
         </ul>
       </nav>
-      <main>
-        
-      </main>
-      
-      <section className='join' id='join'>
-        <h2>
-          Join today!
-        </h2>
-        <p>
-          A power up your fandom and become part of the Mario Club. Get updates, share
-    your thoughts, and connect with fans who love Mario as much as you do.
-        </p>
-        <form>
-          <input type="email" name='email' placeholder='Type email & hit enter' required/>
+      <div className='login-container'>
+        <form id='login-form' action={search} method='post'>
+          <div>
+            <h2>Sign in with password</h2>
+            <div>
+              <label htmlFor="email">E-mail address/Sign-in ID</label>
+              <input type="text" placeholder='Enter your email address' required autoCapitalize='off' autoComplete='off' autoCorrect='off'/>
+            </div>
+            <div>
+              <label htmlFor="password">Password</label>
+              <input type="password" placeholder='Enter your password' required autoCapitalize='off' autoComplete='off' autoCorrect='off'/>
+            </div>
+          </div>
+          <div className='buttons'>
+            <button type='submit'>Sign in</button>
+            <button type='submit'>Sign up</button>
+          </div>
         </form>
-      </section>
+      </div>
+      
       <footer>
         <p className='copyright'>
           © {new Date().getFullYear()} Mario Club. Fan-made project. Not affiliated with Nintendo.
